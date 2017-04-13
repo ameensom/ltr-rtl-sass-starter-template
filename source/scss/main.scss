@@ -1,0 +1,12 @@
+@import "abstracts/fonts";
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/base";
+@import "components/buttons";
+@import "components/form";
+@import "components/header";
+
+.welcome {}
+@import "components/footer";
+@import "abstracts/media_home";
+@import "components/overly";
