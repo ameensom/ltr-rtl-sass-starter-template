@@ -31,7 +31,7 @@ html {
   height: 100%; }
 
 body {
-  font-family: "", "", "", Helvetica, Arial, sans-serif;
+  font-family: "font name", "font name bold", "font name ar", Helvetica, Arial, sans-serif;
   background: url("../images/backgrounds/bg.jpg") repeat-x top;
   height: 100%;
   margin: 0;
@@ -90,6 +90,7 @@ input {
     box-sizing: border-box;
     padding: 30px 20px;
     display: none;
+    text-align: left;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -134,9 +135,10 @@ input {
     height: 0;
     clear: both; }
   .paging > ul > li {
+    float: right;
     margin: 0 3px; }
     .paging > ul > li > a {
-      font: 13px "";
+      font: 13px "font name";
       display: block;
       border-radius: 4px;
       line-height: 26px;

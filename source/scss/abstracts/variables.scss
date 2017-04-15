@@ -7,8 +7,15 @@ $svg_icon: 'svg';
 $icons_path_svg: '../images/svg/';
 $icons_path_png: '../images/png/';
 $background_path: '../images/backgrounds/';
-$font_face: '';
-$font_face_bold: '';
-$font_face_other: '';
-$direction: '';
-$reverse_direction: '';
+$direction: 'left'!default;
+$reverse_direction: 'right'!default;
+$font_face: 'font name'!default;
+$font_face_bold: 'font name bold'!default;
+$font_face_other: 'font name ar'!default;
+@if($language == 'ar') {
+    $direction: 'right';
+    $reverse_direction: 'left';
+    $font_face: 'font name ar';
+    $font_face_bold: 'font name bold ar';
+    $font_face_other: 'font name';
+}

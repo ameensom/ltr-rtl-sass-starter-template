@@ -9,12 +9,11 @@ var config = require('./config'),
   runSequence = require('run-sequence'),
   taskConfig,
   tasks_list = [];
-
 var tasksCreator = function (config) {
   var taskTemplate = function (i) {
     return function () {
       return gulp.src('source/scss/*.scss')
-        .pipe(header('$language: ' + config.languages[i].languageCode + ' ;\n' + config.headers + ''))
+        .pipe(header('$language: ' + config.languages[i].languageCode + ';\n'))
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
           browsers: ['last 7 versions'],
@@ -35,9 +34,7 @@ var tasksCreator = function (config) {
 gulp.task('watch', function () {
   if (tasks_list.indexOf('browserSync') != -1) {
     tasks_list.splice(tasks_list.indexOf('browserSync'), 1);
-    console.log(tasks_list);
   }
-  console.log(tasks_list);
   gulp.watch('source/scss/**/*.scss', tasks_list);
   gulp.watch('source/**/*.html', browserSync.reload);
   gulp.watch('source/**/js/*.js', browserSync.reload);
@@ -54,7 +51,6 @@ gulp.task('browserSync', function () {
   });
 });
 gulp.task('default', function (callback) {
-
   tasksCreator(config);
   runSequence(tasks_list, 'watch', callback);
 });
