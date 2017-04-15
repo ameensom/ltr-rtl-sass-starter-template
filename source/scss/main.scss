@@ -6,7 +6,11 @@
 @import "components/form";
 @import "components/header";
 
-.welcome {}
+.welcome {
+    text-align: #{$direction};
+    float: #{$reverse_direction};
+    // font-size: 20px;
+}
 @import "components/footer";
 @import "abstracts/media_home";
 @import "components/overly";

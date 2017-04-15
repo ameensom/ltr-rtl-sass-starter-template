@@ -1,6 +1,3 @@
-$direction: 'right'!default;
-$reverse_direction: 'left'!default;
-$lang: 'ar'!default;
 $font_14: 14px;
 $home_content: 960px;
 $max_phones: 'max-width: 767px';
@@ -10,14 +7,8 @@ $svg_icon: 'svg';
 $icons_path_svg: '../images/svg/';
 $icons_path_png: '../images/png/';
 $background_path: '../images/backgrounds/';
-$font_face: 'Midan W23';
-$font_face_bold: 'Midan W23 Black';
-$font_face_other: 'bprelpyregular';
-@if($language == 'english') {
-    $direction: 'left';
-    $reverse_direction: 'right';
-    $lang: 'en';
-    $font_face: 'bprelpyregular';
-    $font_face_bold: 'bprelpyregular';
-    $font_face_other: 'Midan W23';
-};
+$font_face: '';
+$font_face_bold: '';
+$font_face_other: '';
+$direction: '';
+$reverse_direction: '';

@@ -11,7 +11,10 @@
     "browser-sync": "^2.7.12",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-compile-handlebars": "^0.6.1",
     "gulp-header": "^1.8.8",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.0.0",
     "run-sequence": "^1.1.2"
   }

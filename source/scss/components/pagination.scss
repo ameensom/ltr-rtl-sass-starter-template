@@ -24,22 +24,6 @@
                 color: #fff;
             }
 
-            &.prev {
-                @include icons( 'page-prev-#{$lang}');
-            }
-
-            &.next {
-                @include icons( 'page-next-#{$lang}');
-            }
-
-            &.first {
-                @include icons( 'page-first-#{$lang}');
-            }
-
-            &.last {
-                @include icons( 'page-last-#{$lang}');
-            }
-
             &.first:hover,
             &.last:hover,
             &.next:hover,

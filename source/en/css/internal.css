@@ -31,7 +31,7 @@ html {
   height: 100%; }
 
 body {
-  font-family: "bprelpyregular", "bprelpyregular", "Midan W23 Black", Helvetica, Arial, sans-serif;
+  font-family: "", "", "", Helvetica, Arial, sans-serif;
   background: url("../images/backgrounds/bg.jpg") repeat-x top;
   height: 100%;
   margin: 0;
@@ -90,7 +90,6 @@ input {
     box-sizing: border-box;
     padding: 30px 20px;
     display: none;
-    text-align: left;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -135,10 +134,9 @@ input {
     height: 0;
     clear: both; }
   .paging > ul > li {
-    float: right;
     margin: 0 3px; }
     .paging > ul > li > a {
-      font: 13px "bprelpyregular";
+      font: 13px "";
       display: block;
       border-radius: 4px;
       line-height: 26px;
@@ -149,25 +147,5 @@ input {
       text-align: center; }
       .paging > ul > li > a.current, .paging > ul > li > a:hover {
         color: #fff; }
-      .paging > ul > li > a.prev {
-        background-image: url("../images/png/page-prev-en.png");
-        background-image: -webkit-linear-gradient(transparent, transparent), url(../images/svg/page-prev-en.svg);
-        background-image: linear-gradient(transparent, transparent), url(../images/svg/page-prev-en.svg);
-        background-repeat: no-repeat; }
-      .paging > ul > li > a.next {
-        background-image: url("../images/png/page-next-en.png");
-        background-image: -webkit-linear-gradient(transparent, transparent), url(../images/svg/page-next-en.svg);
-        background-image: linear-gradient(transparent, transparent), url(../images/svg/page-next-en.svg);
-        background-repeat: no-repeat; }
-      .paging > ul > li > a.first {
-        background-image: url("../images/png/page-first-en.png");
-        background-image: -webkit-linear-gradient(transparent, transparent), url(../images/svg/page-first-en.svg);
-        background-image: linear-gradient(transparent, transparent), url(../images/svg/page-first-en.svg);
-        background-repeat: no-repeat; }
-      .paging > ul > li > a.last {
-        background-image: url("../images/png/page-last-en.png");
-        background-image: -webkit-linear-gradient(transparent, transparent), url(../images/svg/page-last-en.svg);
-        background-image: linear-gradient(transparent, transparent), url(../images/svg/page-last-en.svg);
-        background-repeat: no-repeat; }
       .paging > ul > li > a.first:hover, .paging > ul > li > a.last:hover, .paging > ul > li > a.next:hover, .paging > ul > li > a.prev:hover {
         background-color: #EDEDED; }

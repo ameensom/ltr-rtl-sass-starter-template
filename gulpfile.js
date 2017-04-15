@@ -1,54 +1,60 @@
-var gulp = require('gulp'),
+var config = require('./config'),
+  gulp = require('gulp'),
+  handlebars = require('gulp-compile-handlebars'),
+  rename = require('gulp-rename'),
   sass = require('gulp-sass'),
   header = require('gulp-header'),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync'),
   runSequence = require('run-sequence'),
-  multilanguage = true,
-  main_language = 'arabic',
-  alternative_language = 'english',
-  sass_tasks = multilanguage ? ['sass', 'sass_other'] : ['sass'],
-  sequence_tasks = multilanguage ? ['sass', 'sass_other', 'browserSync'] : ['sass', 'browserSync'];
+  taskConfig,
+  tasks_list = [];
+
+var tasksCreator = function (config) {
+  var taskTemplate = function (i) {
+    return function () {
+      return gulp.src('source/scss/*.scss')
+        .pipe(header('$language: ' + config.languages[i].languageCode + ' ;\n' + config.headers + ''))
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer({
+          browsers: ['last 7 versions'],
+          cascade: false
+        }))
+        .pipe(gulp.dest('source/' + config.languages[i].outputfolder + '/css'))
+        .pipe(browserSync.reload({
+          stream: true
+        }));
+    };
+  };
+  for (var i = 0; i < config.languages.length; i++) {
+    gulp.task(config.languages[i].taskName, taskTemplate(i));
+    tasks_list.push(config.languages[i].taskName);
+  }
+  tasks_list.push('browserSync');
+};
+gulp.task('watch', function () {
+  if (tasks_list.indexOf('browserSync') != -1) {
+    tasks_list.splice(tasks_list.indexOf('browserSync'), 1);
+    console.log(tasks_list);
+  }
+  console.log(tasks_list);
+  gulp.watch('source/scss/**/*.scss', tasks_list);
+  gulp.watch('source/**/*.html', browserSync.reload);
+  gulp.watch('source/**/js/*.js', browserSync.reload);
+});
 gulp.task('browserSync', function () {
+  gulp.src('source/index.handlebars')
+    .pipe(handlebars(config.languages))
+    .pipe(rename('index.html'))
+    .pipe(gulp.dest('source'));
   browserSync({
     server: {
       baseDir: 'source'
     }
-  })
-});
-gulp.task('sass', function () {
-  console.log('Running one language');
-  return gulp.src('source/scss/*.scss')
-    .pipe(header('$language: ' + main_language + ' ;\n'))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 7 versions'],
-      cascade: false
-    }))
-    .pipe(gulp.dest('source/ar/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
-gulp.task('sass_other', function () {
-  console.log('Running Multilanguage');
-  return gulp.src('source/scss/*.scss')
-    .pipe(header('$language: ' + alternative_language + ' ;\n'))
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 7 versions'],
-      cascade: false
-    }))
-    .pipe(gulp.dest('source/en/css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
-gulp.task('watch', function () {
-  gulp.watch('source/scss/**/*.scss', sass_tasks);
-  gulp.watch('source/**/*.html', browserSync.reload);
-  gulp.watch('source/**/js/*.js', browserSync.reload);
+  });
 });
 gulp.task('default', function (callback) {
-  runSequence(sequence_tasks, 'watch', callback)
+
+  tasksCreator(config);
+  runSequence(tasks_list, 'watch', callback);
 });

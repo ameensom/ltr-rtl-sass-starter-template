@@ -31,7 +31,7 @@ html {
   height: 100%; }
 
 body {
-  font-family: "bprelpyregular", "bprelpyregular", "Midan W23 Black", Helvetica, Arial, sans-serif;
+  font-family: "", "", "", Helvetica, Arial, sans-serif;
   background: url("../images/backgrounds/bg.jpg") repeat-x top;
   height: 100%;
   margin: 0;
@@ -90,7 +90,6 @@ input {
     box-sizing: border-box;
     padding: 30px 20px;
     display: none;
-    text-align: left;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -142,7 +141,6 @@ input {
     box-sizing: border-box;
     padding: 30px 20px;
     display: none;
-    text-align: left;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
