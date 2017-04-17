@@ -41,10 +41,6 @@ Thumbs.db
 node_modules/*
 node_modules/
 node_modules
-source/**/fonts/*.woff
-source/**/fonts/*.svg
-source/**/fonts/*.eot
-source/**/fonts/*.ttf
 
 # SASS #
 ########

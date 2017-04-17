@@ -1,48 +1,48 @@
 .overly {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,.4);
-    z-index: 99999;
-    text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+  z-index: 99999;
+  text-align: center;
+  display: none;
+
+  &.visible {
+    display: block;
+  }
+
+  .box {
+    position: absolute;
+    background-color: #ffffff;
+    z-index: 1003;
+    width: 70%;
+    min-height: 10px;
+    box-sizing: border-box;
+    padding: 30px 20px;
     display: none;
-
-    &.visible {
-        display: block;
+    text-align: #{$direction};
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @media ($max-phones) {
+      padding: 15px 10px;
+      display: block;
+      top: initial;
+      left: initial;
+      width: 100%;
+      bottom: 0;
+      transform: translateY(100%);
+      transition: transform .5s ease-in-out;
+      transition-delay: .2s;
     }
 
-    .box {
-        position: absolute;
-        background-color: #fff;
-        z-index: 1003;
-        width: 70%;
-        min-height: 10px;
-        box-sizing: border-box;
-        padding: 30px 20px;
-        display: none;
-        text-align: #{$direction};
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        @media ($max_phones) {
-            padding: 15px 10px;
-            display: block;
-            top: initial;
-            left: initial;
-            width: 100%;
-            bottom: 0;
-            transform: translateY(100%);
-            transition: transform 0.5s ease-in-out;
-            transition-delay: 0.2s;
-        }
-
-        &.show {
-            display: block;
-            @media ($max_phones) {
-                transform: translateY(0%);
-            }
-        }
+    &.show {
+      display: block;
+      @media ($max-phones) {
+        transform: translateY(0%);
+      }
     }
+  }
 }

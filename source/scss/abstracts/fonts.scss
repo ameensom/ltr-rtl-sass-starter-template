@@ -1,25 +1,12 @@
 @font-face {
-	font-family: "HelveticaNeue Light";
-	font-weight: 300;
-	src: url("../fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot?#iefix");
-	src: url("../fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot?#iefix") format("eot"),url("../fonts/530dee22-e3c1-4e9f-bf62-c31d510d9656.woff") format("woff"),url("../fonts/688ab72b-4deb-4e15-a088-89166978d469.ttf") format("truetype"),url("../fonts/7816f72f-f47e-4715-8cd7-960e3723846a.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+  font-family: 'BPReplay Regular';
+  src: url('../fonts/bpreplay-webfont.eot');
+  src: url('../fonts/bpreplay-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/bpreplay-webfont.woff') format('woff'), url('../fonts/bpreplay-webfont.ttf') format('truetype'), url('../fonts/bpreplay-webfont.svg#webfontIhiDai48') format('svg');
 }
 @font-face {
-	font-family: "HelveticaNeue Roman";
-	font-weight: 300;
-	src: url("../fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix");
-	src: url("../fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix") format("eot"),url("../fonts/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"),url("../fonts/b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"),url("../fonts/da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
-}
-@font-face {
-	font-family: "HelveticaNeue Medium";
-	font-weight: 300;
-	src: url("../fonts/07fe0fec-b63f-4963-8ee1-535528b67fdb.eot?#iefix");
-	src: url("../fonts/07fe0fec-b63f-4963-8ee1-535528b67fdb.eot?#iefix") format("eot"),url("../fonts/60be5c39-863e-40cb-9434-6ebafb62ab2b.woff") format("woff"),url("../fonts/4c6503c9-859b-4d3b-a1d5-2d42e1222415.ttf") format("truetype"),url("../fonts/36c182c6-ef98-4021-9b0d-d63122c2bbf5.svg#36c182c6-ef98-4021-9b0d-d63122c2bbf5") format("svg");
-}
-@font-face {
-	font-family: 'Noto Kufi Arabic';
-	font-style: normal;
-	font-weight: 400;
-	src: url("../fonts/NotoKufiArabic-Regular.eot");
-	src: url("../fonts/NotoKufiArabic-Regular.eot?#iefix") format('embedded-opentype'), url("../fonts/NotoKufiArabic-Regular.woff2") format('woff2'), url("../fonts/NotoKufiArabic-Regular.woff") format('woff'), url("../fonts/NotoKufiArabic-Regular.ttf") format('truetype');
+  font-family: 'Noto Kufi Arabic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/NotoKufiArabic-Regular.eot');
+  src: url('../fonts/NotoKufiArabic-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/NotoKufiArabic-Regular.woff2') format('woff2'), url('../fonts/NotoKufiArabic-Regular.woff') format('woff'), url('../fonts/NotoKufiArabic-Regular.ttf') format('truetype');
 }

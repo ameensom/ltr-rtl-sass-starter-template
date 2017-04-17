@@ -4,6 +4,8 @@ var config = require('./config'),
   rename = require('gulp-rename'),
   sass = require('gulp-sass'),
   header = require('gulp-header'),
+  gulpif = require('gulp-if'),
+  minifyCss = require("gulp-minify-css"),
   autoprefixer = require('gulp-autoprefixer'),
   browserSync = require('browser-sync'),
   runSequence = require('run-sequence'),
@@ -15,11 +17,9 @@ var tasksCreator = function (config) {
       return gulp.src('source/scss/*.scss')
         .pipe(header('$language: ' + config.languages[i].languageCode + ';\n'))
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({
-          browsers: ['last 7 versions'],
-          cascade: false
-        }))
-        .pipe(gulp.dest('source/' + config.languages[i].outputfolder + '/css'))
+        .pipe(gulpif(config.autoPrefixer, autoprefixer(config.autoPrefixerOptions)))
+        .pipe(gulpif(config.minifyCSS, minifyCss()))
+        .pipe(gulp.dest('build/' + config.languages[i].outputfolder + '/css'))
         .pipe(browserSync.reload({
           stream: true
         }));
@@ -36,17 +36,17 @@ gulp.task('watch', function () {
     tasks_list.splice(tasks_list.indexOf('browserSync'), 1);
   }
   gulp.watch('source/scss/**/*.scss', tasks_list);
-  gulp.watch('source/**/*.html', browserSync.reload);
-  gulp.watch('source/**/js/*.js', browserSync.reload);
+  gulp.watch('build/**/*.html', browserSync.reload);
+  gulp.watch('build/**/js/*.js', browserSync.reload);
 });
 gulp.task('browserSync', function () {
   gulp.src('source/index.handlebars')
     .pipe(handlebars(config.languages))
     .pipe(rename('index.html'))
-    .pipe(gulp.dest('source'));
+    .pipe(gulp.dest('build'));
   browserSync({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     }
   });
 });

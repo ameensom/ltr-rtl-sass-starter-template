@@ -1,0 +1,10 @@
+@media ($max-tablets) {
+  body {
+    background-color: #f0f0f0;
+  }
+}
+@media ($max-phones) {
+  body {
+    background-color: #dddddd;
+  }
+}

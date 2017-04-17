@@ -1,15 +1,15 @@
-@import "abstracts/fonts";
-@import "abstracts/variables";
-@import "abstracts/mixins";
-@import "base/base";
-@import "components/buttons";
-@import "components/form";
-@import "components/header";
+@import 'abstracts/fonts';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'base/base';
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/header';
 
 .welcome {
-    text-align: #{$direction};
-    float: #{$reverse_direction};
+  text-align: #{$reverse-direction};
+  float: #{$direction};
 }
-@import "components/footer";
-@import "abstracts/media_home";
-@import "components/overly";
+@import 'components/footer';
+@import 'components/overly';
+@import 'base/mobile';

@@ -1,60 +1,56 @@
 @mixin clearfix {
-	&:after {
-		content: " ";
-		visibility: hidden;
-		display: block;
-		height: 0;
-		clear: both;
-	}
+  &:after {
+    content: ' ';
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
 }
 @mixin size($width, $height: $width) {
-	width: $width;
-	height: $height;
+  width: $width;
+  height: $height;
 }
 @mixin placeholder {
-	&::-webkit-input-placeholder {
-		@content
-	}
+  &::-webkit-input-placeholder {
+    @content
+  }
 
-	&:-moz-placeholder {
-		@content
-	}
+  &:-moz-placeholder {
+    @content
+  }
 
-	&::-moz-placeholder {
-		@content
-	}
+  &::-moz-placeholder {
+    @content
+  }
 
-	&:-ms-input-placeholder {
-		@content
-	}
+  &:-ms-input-placeholder {
+    @content
+  }
 }
-@mixin clear_list {
-	padding: 0;
-	margin: 0;
-	list-style: none;
+@mixin clear-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 @mixin no_webkit_flickering {
-	-webkit-backface-visibility: hidden;
-	-webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
 @mixin GPU_acceleration {
-	transform: translateZ(0);
+  transform: translateZ(0);
 }
 @mixin clear_link {
-	&,
-	&:active,
-	&:focus,
-	&:hover,
-	&:visited {
-		text-decoration: none;
-	}
+  &, &:active, &:focus, &:hover, &:visited {
+    text-decoration: none;
+  }
 
-	&:hover {
-		color: inherit;
-	}
+  &:hover {
+    color: inherit;
+  }
 }
 @mixin icons($icon_name) {
-	background-image: url("#{$icons_path_png}#{$icon_name}.png");
-	background-image: linear-gradient(transparent,transparent),url(#{$icons_path_svg}#{$icon_name}.svg);
-	background-repeat: no-repeat;
+  background-image: url('#{$icons-folder-png}#{$icon_name}.png');
+  background-image: linear-gradient(transparent,transparent),url(#{$icons-folder-svg}#{$icon_name}.svg);
+  background-repeat: no-repeat;
 }

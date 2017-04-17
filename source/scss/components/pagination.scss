@@ -1,35 +1,31 @@
-.paging > ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    @include clearfix;
+.paging>ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  @include clearfix;
 
-    > li {
-        float: #{$reverse_direction};
-        margin: 0 3px;
+  >li {
+    float: #{$reverse-direction};
+    margin: 0 3px;
 
-        > a {
-            font: 13px $font_face;
-            display: block;
-            border-radius: 4px;
-            line-height: 26px;
-            min-height: 26px;
-            min-width: 26px;
-            background-position: center center;
-            background-repeat: no-repeat;
-            text-align: center;
+    >a {
+      font: 13px $font-face;
+      display: block;
+      border-radius: 4px;
+      line-height: 26px;
+      min-height: 26px;
+      min-width: 26px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      text-align: center;
 
-            &.current,
-            &:hover {
-                color: #fff;
-            }
+      &.current, &:hover {
+        color: #ffffff;
+      }
 
-            &.first:hover,
-            &.last:hover,
-            &.next:hover,
-            &.prev:hover {
-                background-color: #EDEDED;
-            }
-        }
+      &.first:hover, &.last:hover, &.next:hover, &.prev:hover {
+        background-color: #ededed;
+      }
     }
+  }
 }
