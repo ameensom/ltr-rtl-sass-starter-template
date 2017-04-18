@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ameen Saeed",
-  "license": "",
+  "license": "MIT",
   "description": "Starter sass template for compiling multiple languages interfaces",
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-compile-handlebars": "^0.6.1",
+    "gulp-csscomb": "^3.0.8",
     "gulp-header": "^1.8.8",
     "gulp-if": "^2.0.2",
     "gulp-minify-css": "^1.2.4",

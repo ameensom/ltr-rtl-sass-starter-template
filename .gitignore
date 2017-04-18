@@ -41,8 +41,13 @@ Thumbs.db
 node_modules/*
 node_modules/
 node_modules
+build/**/css/**.css
 
 # SASS #
 ########
 .sass-cache/
 *.css.map
+
+# Thinking Outload #
+####################
+ideas.js

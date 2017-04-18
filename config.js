@@ -17,5 +17,6 @@ module.exports = {
     cascade: false
   },
   autoPrefixer: true,
+  beautifyCSS: true,
   minifyCSS: false
 };

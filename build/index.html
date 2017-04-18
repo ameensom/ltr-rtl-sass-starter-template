@@ -2,48 +2,59 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" href="images/fav/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="images/fav/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/x-icon" href="images/fav/favicon.ico">
-    <link rel="manifest" href="images/fav/manifest.json">
-    <link rel="mask-icon" href="images/fav/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/jquery.min.1.12.4.js"></script>
-    <script src="js/modernizr.cssmediaqueries.js"></script>
-    <!--page title-->
-    <title>Multi Language Site Template</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="images/fav/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="images/fav/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/x-icon" href="images/fav/favicon.ico">
+  <link rel="manifest" href="images/fav/manifest.json">
+  <link rel="mask-icon" href="images/fav/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery.min.1.12.4.js"></script>
+  <script src="js/modernizr.cssmediaqueries.js"></script>
+  <!--page title-->
+  <title>Multi Language Site Template</title>
 </head>
 
 <body>
-    <div class="page">
-      <h1>SASS RTL/LTR Template</h1>
-      <h3>What does it do?</h3>
-      <p>This template works a skeleton for creating web interface with dual direction, you will need to compile once and use the same scss files to style the page.<br>Just follow the simple guidelines and your work will be done in not time.</p>
+  <div class="page">
+    <h1>SASS RTL/LTR Template</h1>
+    <h3>What does it do?</h3>
+    <p>This template works a skeleton for creating web interface with dual direction, you will need to compile once and use the same scss files to style the page.<br>Just follow the simple guidelines and your work will be done in not time.</p>
+    <h3>Features</h3>
+    <p>
+      - Ability to add more than one language.<br> - browserSync integration that enables auto refresh of the browser upon saving html/scss/js files.<br> - Cool mixins included.<br> - Easy to read and understand scss file structure.<br> - Added autoprefixer
+      option.<br> - Added CSS beautify option.<br> - Added CSS minify option.
+    </p>
 
-      <h3>Features</h3>
-      <p>
-        - Ability to add more than one language.<br>
-        - browserSync integration that enables auto refresh of the browser upon saving html/scss/js files.<br>
-        - Cool mixins included.<br>
-        - Easy to read and understand scss file structure.<br>
-        - Added autoprefixer support.
-      </p>
+    <h3>Installation</h3>
+    <p>- Install the main dependencies Node,NPM and Ruby.
+      <br> - clone the repositry to your desktop.
+      <br> - From terminal / command line navigate to repositry folder on your desktop then run the following command to install package dependencies.
+      <span>npm install</span>
+      <br> - Type
+      <span>gulp</span> to start working.
 
-      <h3>How to use ?</h3>
-      <p>- Start by defining the language that you are going to use.</p>
-        <h1>Click on the interface local you want to preview/debug/test :</h1>
-            <a href="/rtl">Arabic</a><br>
-            <a href="/ltr">English</a><br>
-    </div>
-    <div class="footer"></div>
-    <div class="overly">
-        <div class="box action-class"></div>
-    </div>
-    <script src="js/js.js"></script>
+    </p>
+
+    <h3>How to use ?</h3>
+    <p>- All you have to do is to edit the scss files inside source/scss, file names are self explanetory.
+      <br> - While writing your scss use varibles $direction and $reverse_direction in proprety value which will be compiled to right/left based on the language for rtl $direction is equal to right, $reverse_direction is equal to left; and vise versa
+      for ltr.
+      <br> - use #{$direction}|#{$reverse_direction} with property name, e.g. 'padding-#{$direction}: 10px;' which translate to padding-right:10px, '#{$direction}:10px' which translate to right:10px.
+      <br>
+    </p>
+    <h1>Click on the interface local you want to preview/debug/test :</h1>
+      <a href="/rtl">Arabic</a><br>
+      <a href="/ltr">English</a><br>
+  </div>
+  <div class="footer"></div>
+  <div class="overly">
+    <div class="box action-class"></div>
+  </div>
+  <script src="js/js.js"></script>
 </body>
 
 </html>
