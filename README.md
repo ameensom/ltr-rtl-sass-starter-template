@@ -8,10 +8,12 @@ Along with that it'll Autoprefix, Beautify and/or Minify the final css files.
 ## Installing / Getting started
 If you already have Node.js,SASS and Git installed you can skip the prerequisites.
 
-###Prerequisites
+### Prerequisites
 This package depends on the following packages and it should be installed on your machine.
 >[Node.js](https://nodejs.org/en/)
+
 >[Sass](http://sass-lang.com/install)
+
 >[Git](https://www.atlassian.com/git/tutorials/install-git)
 
 Here you should say what actually happens when you execute the code above.
@@ -19,7 +21,7 @@ Here you should say what actually happens when you execute the code above.
 ## Installation
 Download the repository to your machine as zip file or clone it to your dekstop by running the following command in the terminal / command line, then installing NPM packages.
 
-```shell
+```bash
 git clone https://github.com/ameensom/ltr-rtl-sass-starter-template.git
 cd ltr-rtl-sass-starter-template/
 npm install
@@ -29,16 +31,14 @@ npm install
 - Third command will install the required packages to run the tool from npm.
 
 ### Building
-
 After installing the npm packages needed just enter the following command :
-```shell
+```bash
 gulp
 ```
 that will open up the browser at `http://localhost:3000` from there you can click on the language interface you need, and you'll see the default **index.html** file that i've included with the project.
 
 ## How to use
-While writing your sass/scss code, use the following variables instead of `Right` and `Left`.
-`$direction` `$reverse-direction`.
+While writing your sass/scss code, use the following variables `$direction` `$reverse-direction` instead of `Right` and `Left`.
 
 ### Example
 **As a value**
@@ -49,6 +49,7 @@ float: $reverse-direction;
 }
 ```
 The css output would be as following :
+
 *LTR*
 ```css
 .selector {
@@ -73,6 +74,7 @@ The css output would be as following :
 }
 ```
 The css output would be as following :
+
 *LTR*
 ```css
 .selector-left {
@@ -92,6 +94,7 @@ The css output would be as following :
 }
 ```
 **Additional Use**
+
 You can use `$language` variable with `@if` `@else`  conditions to specify styles for each interface.
 ```scss
 body {
@@ -102,6 +105,7 @@ body {
  }
 ```
 The css output would be as following :
+
 *LTR*
 ```css
 body {
@@ -180,6 +184,7 @@ There is not much of configuration to do, still you can edit `config.js` to enab
 #### languages
 Type: `Array of Objects`  
 Required:`true`
+
 Default:
 ```js
 [{
@@ -199,35 +204,52 @@ Default:
 This is the list of languages used in this template, default is Arabic and English, you can more by adding another JSON Object as an item to the array.
 
 #### languages[index].taskName
-Type: `string`  
+Type: `string`
+
 Default: `sass_ar`,`sass_en`
+
 Unique: `true`
+
 Required:`true`
+
 Specify the gulp task name here.
 
 #### languages[index].languageCode
 Type: `string`  
+
 Default: `ar`,`en`
+
 Unique: `true`
+
 Required:`true`
+
 The language code to be used while compiling sass/scss files.
 
 #### languages[index].outputfolder
 Type: `string`  
+
 Default: `rtl`,`ltr`
+
 Unique: `true`
+
 Required:`true`
+
 Language folder where the html and css files will be.
 #### languages[index].languageName
 Type: `string`  
+
 Default: `Arabic`,`English`
+
 Unique: `true`
+
 Required:`true`
+
 Language name to identify the object.
 
 
 #### autoPrefixerOptions
-Type: `Object`  
+Type: `Object`
+
 Default:
 ```js
 {
@@ -237,16 +259,22 @@ Default:
 ```
 Autoprefixer options, you can find more about it in [Autoprefixer Documentation](https://github.com/postcss/autoprefixer#options) and [BrowsersList Queries](https://github.com/ai/browserslist#queries)
 #### autoPrefixer
-Type: `Boolean`  
+Type: `Boolean`
+
 Default: `true`
+
 To Autoprefix the compiled css to support old browsers, see [Autoprefixer](https://github.com/postcss/autoprefixer).
 #### beautifyCSS
-Type: `Boolean`  
+Type: `Boolean`
+
 Default: `true`
+
 To beautify the final css file.
 #### minifyCSS
-Type: `Boolean`  
+Type: `Boolean`
+
 Default: `false`
+
 To compress the final css file,prefer to enable it in production.
 
 ## Contributing
