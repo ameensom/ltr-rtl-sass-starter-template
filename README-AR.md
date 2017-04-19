@@ -1,11 +1,11 @@
-> [اقرأني باللغة العربية](README-AR.md)
+> [Read Me in English](README.md)
 
-# LTR-RTL SASS Starter Template
-> It's time to move on from css, give your self a head start with this template.
+# قالب ساس لليمين الى اليسار و اليسار إلى اليمين
+> حان الوقت للانتقال من css التقليدي و اعط نفسك انطلاقة سريعة مع هذا القالب.
 
-Many front end developers would make the UI for LTR and then manually change the direction to RTL or use a css LTR to RTL converter and the final results would still need some tweaking.
-This template would help you move on past that, you would just write the sass/scss code once and it will automatically compile the LTR/RTL css files for you.
-Along with that it'll Autoprefix, Beautify and/or Minify the final css files.
+العديد من مبرمجي واجهات الويب في المنطقة العربية يعانون اثناء العمل على المواقع ذات اللغة العربية و الانجليزية، فبعد الانتهاء من التقطيع عليه ان يقوم بتحويل الاتجاهات يدويا أو حتى عبر رفع ملف css الى مواقع لتقوم بذلك، و لكن تبقى هناك بعض الاخطاء التي تتطلب التدخل اليدوي.
+هذا القالب سيساعدك في تخطي هذه المعضلة، كل ما عليك هو ان تقوم بكتابة أكواد sass/scss لمرة واحدة، و سيقوم القالب بترجمتها إلى ملفات داعمة للاتجاهين.
+اضافة إلى ذلك سيتم تجميل الكود او / و ضغطه في الملفات النهائية.
 
 ## Installing / Getting started
 If you already have Node.js,SASS and Git installed you can skip the prerequisites.
