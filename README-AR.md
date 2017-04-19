@@ -154,7 +154,8 @@ npm install
 <h3 dir="rtl"><a id="_HTML_172"></a>ملفات HTML</h3>
 <p dir="rtl">عليك ان تقوم بإضافة ملفات HTML يدويا داخل المجلدات التالية  <strong><code>build\ltr</code></strong> و <strong><code>build\rtl</code></strong> ، قم بإنشاء مجلدات اضافية بحسب رغبتك.</p>
 <h3 dir="rtl"><a id="_SCSS_175"></a>ملفات SCSS</h3>
-<p dir="rtl">Start creating your custom UI by editing the scss files as your need, like any other scss project, however there are some lines that shouldn’t be edited and/or not removed , I’ve added comments next to it.</p>
+<p dir="rtl">
+ابدا بإنشاء واجهاتك الخاصة، عبر تحرير ملفات scss كأي مشروع scss آخر. هناك بعض الأسطر التي يجب ان لا يتم تعديلها و/أو حذفها، قم باضافة تعليق بجانبها لتمييزها.</p>
 <h2 dir="rtl"><a id="_178"></a>المميزات</h2>
 <ul dir="rtl">
 <li>ترجم ملفات sass/scss الى css في مجلدين مختلفين او اكثر، و بقيم مختلفة للاتجاهات بحسب اللغة</li>
@@ -166,9 +167,9 @@ npm install
 <h2 dir="rtl"><a id="_185"></a>الاعدادات</h2>
 <p dir="rtl">لا يوجد الكثير من الاعدادات ، و لكن يمكنك تحرير ملف  <code>config.js</code> لتعطيل او تفعيل بعض المميزات او اضافة لغة جديدة</p>
 <h4><a id="languages_189"></a>languages</h4>
-<p dir="rtl">Type: <code>Array of Objects</code><br>
-Required:<code>true</code></p>
-<p dir="rtl">Default:</p>
+<p dir="rtl">نوع القيمة : <code>Array of Objects</code><br>
+قيمة مطلوبة : <code>true</code></p>
+<p dir="rtl">القيمة الافتراضية : </p>
 <pre><code class="language-js">[{
   taskName: <span class="hljs-string">'sass_ar'</span>,
    languageCode: <span class="hljs-string">'ar'</span>,
@@ -182,52 +183,53 @@ Required:<code>true</code></p>
    languageName: <span class="hljs-string">'English'</span>
  }]
 </code></pre>
-<p dir="rtl">This is the list of languages used in this template, default is Arabic and English, you can more by adding another JSON Object as an item to the array.</p>
+<p dir="rtl">
+هذه قائمة اللغات المستخدمة في هذا القالب، اللغة العربية و الانجليزية هما الافتراضية، يمكنك اضافة المزيد من اللغات عبر اضافة عنصر آخر الى المصفوفة.</p>
 <h4><a id="languagesindextaskName_211"></a>languages[index].taskName</h4>
-<p dir="rtl">Type: <code>string</code></p>
-<p dir="rtl">Default: <code>sass_ar</code>,<code>sass_en</code></p>
-<p dir="rtl">Unique: <code>true</code></p>
-<p dir="rtl">Required:<code>true</code></p>
-<p dir="rtl">Specify the gulp task name here.</p>
+<p dir="rtl">نوع القيمة : <code>string</code></p>
+<p dir="rtl">القيمة الافتراضية : <code>sass_ar</code>,<code>sass_en</code></p>
+<p dir="rtl">قيمة فريدة : <code>true</code></p>
+<p dir="rtl">قيمة مطلوبة : <code>true</code></p>
+<p dir="rtl">لتحديد اسم وظيفة gulp</p>
 <h4><a id="languagesindexlanguageCode_222"></a>languages[index].languageCode</h4>
-<p dir="rtl">Type: <code>string</code></p>
-<p dir="rtl">Default: <code>ar</code>,<code>en</code></p>
-<p dir="rtl">Unique: <code>true</code></p>
-<p dir="rtl">Required:<code>true</code></p>
-<p dir="rtl">The language code to be used while compiling sass/scss files.</p>
+<p dir="rtl">نوع القيمة : <code>string</code></p>
+<p dir="rtl">القيمة الافتراضية : <code>ar</code>,<code>en</code></p>
+<p dir="rtl">قيمة فريدة : <code>true</code></p>
+<p dir="rtl">قيمة مطلوبة : <code>true</code></p>
+<p dir="rtl">رمز اللغة ليتم استخدامه مع ملفات scss</p>
 <h4><a id="languagesindexoutputfolder_233"></a>languages[index].outputfolder</h4>
-<p dir="rtl">Type: <code>string</code></p>
-<p dir="rtl">Default: <code>rtl</code>,<code>ltr</code></p>
-<p dir="rtl">Unique: <code>true</code></p>
-<p dir="rtl">Required:<code>true</code></p>
-<p dir="rtl">Language folder where the html and css files will be.</p>
+<p dir="rtl">نوع القيمة : <code>string</code></p>
+<p dir="rtl">القيمة الافتراضية : <code>rtl</code>,<code>ltr</code></p>
+<p dir="rtl">قيمة فريدة : <code>true</code></p>
+<p dir="rtl">قيمة مطلوبة : <code>true</code></p>
+<p dir="rtl">المجلد الخاص باللغة و الذي سيتم حفظ ملف css بداخله</p>
 <h4><a id="languagesindexlanguageName_243"></a>languages[index].languageName</h4>
-<p dir="rtl">Type: <code>string</code></p>
-<p dir="rtl">Default: <code>Arabic</code>,<code>English</code></p>
-<p dir="rtl">Unique: <code>true</code></p>
-<p dir="rtl">Required:<code>true</code></p>
-<p dir="rtl">Language name to identify the object.</p>
+<p dir="rtl">نوع القيمة : <code>string</code></p>
+<p dir="rtl">القيمة الافتراضية : <code>Arabic</code>,<code>English</code></p>
+<p dir="rtl">قيمة فريدة : <code>true</code></p>
+<p dir="rtl">قيمة مطلوبة : <code>true</code></p>
+<p dir="rtl">اسم اللغة للتعريف بالعنصر</p>
 <h4><a id="autoPrefixerOptions_255"></a>autoPrefixerOptions</h4>
-<p dir="rtl">Type: <code>Object</code></p>
-<p dir="rtl">Default:</p>
+<p dir="rtl">نوع القيمة : <code>Object</code></p>
+<p dir="rtl">القيمة الافتراضية : </p>
 <pre><code class="language-js">{
   browsers: [<span class="hljs-string">'last 7 versions'</span>],
   cascade: <span class="hljs-literal">false</span>
 }
 </code></pre>
-<p dir="rtl">Autoprefixer options, you can find more about it in <a href="https://github.com/postcss/autoprefixer#options">Autoprefixer Documentation</a> and <a href="https://github.com/ai/browserslist#queries">BrowsersList Queries</a></p>
+<p dir="rtl">للمزيد من خيارات هذه الأداة قم بالتوجه إلى <a href="https://github.com/postcss/autoprefixer#options">Autoprefixer Documentation</a> و <a href="https://github.com/ai/browserslist#queries">BrowsersList Queries</a></p>
 <h4><a id="autoPrefixer_266"></a>autoPrefixer</h4>
-<p dir="rtl">Type: <code>Boolean</code></p>
-<p dir="rtl">Default: <code>true</code></p>
-<p dir="rtl">To Autoprefix the compiled css to support old browsers, see <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>.</p>
+<p dir="rtl">نوع القيمة : <code>Boolean</code></p>
+<p dir="rtl">القيمة الافتراضية : <code>true</code></p>
+<p dir="rtl">لإضافة دعم المتصفحات القديمة، انظر إلى <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>.</p>
 <h4><a id="beautifyCSS_272"></a>beautifyCSS</h4>
-<p dir="rtl">Type: <code>Boolean</code></p>
-<p dir="rtl">Default: <code>true</code></p>
-<p dir="rtl">To beautify the final css file.</p>
+<p dir="rtl">نوع القيمة : <code>Boolean</code></p>
+<p dir="rtl">القيمة الافتراضية : <code>true</code></p>
+<p dir="rtl">لتجميل ملف cssالنهائي</p>
 <h4><a id="minifyCSS_278"></a>minifyCSS</h4>
-<p dir="rtl">Type: <code>Boolean</code></p>
-<p dir="rtl">Default: <code>false</code></p>
-<p dir="rtl">To compress the final css file,prefer to enable it in production.</p>
+<p dir="rtl">نوع القيمة : <code>Boolean</code></p>
+<p dir="rtl">القيمة الافتراضية : <code>false</code></p>
+<p dir="rtl">لضغط ملف css النهائي</p>
 <h2 dir="rtl"><a id="_285"></a>المساهمة</h2>
 <p dir="rtl">بإمكانك المساهمة في اي وقت، ارحب بكافة طلبات السحب.</p>
 <h2 dir="rtl"><a id="_290"></a>الترخيص</h2>
