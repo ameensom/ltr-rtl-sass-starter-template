@@ -8,7 +8,7 @@ This template would help you move on past that, you would just write the sass/sc
 Along with that it'll Autoprefix, Beautify and/or Minify the final css files.
 
 ## Installing / Getting started
-If you already have Node.js,SASS and Git installed you can skip the prerequisites.
+If you already have `NodeJS`,`SASS` and `Git` installed you can skip the prerequisites.
 
 ### Prerequisites
 This package depends on the following softwares and it should be installed on your machine before continue any further.
@@ -18,7 +18,7 @@ This package depends on the following softwares and it should be installed on yo
 
 >[Git](https://www.atlassian.com/git/tutorials/install-git)
 
-Here you should say what actually happens when you execute the code above.
+
 
 ## Installation
 Download the repository to your machine as zip file or clone it to your dekstop by running the following command in the terminal / command line, then installing NPM packages.
