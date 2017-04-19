@@ -8,14 +8,13 @@ html {
 }
 
 body {
-  @if($language == 'arabic') {
+  @if($language == 'ar') {
     direction: rtl;
     font-family: $font-face,$font-face-bold,$font-face-other,Helvetica, Arial, sans-serif;
   }
   @else {
     font-family: $font-face,$font-face-bold,$font-face-other,Helvetica, Arial, sans-serif;
   }
-  // background: url("#{$backgrounds-folder}bg.jpg") repeat-x top;
   height: 100%;
   margin: 0;
   padding: 0;

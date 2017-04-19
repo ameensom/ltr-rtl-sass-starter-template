@@ -7,15 +7,16 @@ $svg-icon: 'svg';
 $icons-folder-svg: '../images/svg/';
 $icons-folder-png: '../images/png/';
 $backgrounds-folder: '../images/backgrounds/';
-$direction: 'left' !default;
-$reverse-direction: 'right' !default;
+$direction: 'left' !default; // Dont't Remove or Edit this line
+$reverse-direction: 'right' !default; // Dont't Remove or Edit this line
 $font-face: 'BPReplay Regular' !default;
 $font-face-bold: 'BPReplay Regular Bold' !default;
 $font-face-other: 'Noto Kufi Arabic' !default;
+// Dont't Remove this Block
 @if($language == 'ar') {
-  $direction: 'right';
-  $reverse-direction: 'left';
+  $direction: 'right'; // Dont't Remove or Edit this line
+  $reverse-direction: 'left'; // Dont't Remove or Edit this line
   $font-face: 'Noto Kufi Arabic';
   $font-face-bold: 'Noto Kufi Arabic Bold';
   $font-face-other: 'BPReplay Regular';
-}
+} // Dont't Remove this Block
