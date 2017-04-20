@@ -22,6 +22,7 @@ html {
 }
 
 body {
+  direction: rtl;
   font-family: 'Noto Kufi Arabic', 'Noto Kufi Arabic Bold', 'BPReplay Regular', Helvetica, Arial, sans-serif;
   height: 100%;
   margin: 0;
