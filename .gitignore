@@ -46,6 +46,7 @@ node_modules
 ########
 .sass-cache/
 *.css.map
+build/**/css/*.css
 
 # Thinking Outload #
 ####################
